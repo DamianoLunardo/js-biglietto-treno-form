@@ -10,24 +10,64 @@
 
  <div class="container">
     <h1>Calcola il prezzo del biglietto</h1>
+    <div class="row">
+    <div class="col-4">
     <div>
         <p>Nome e cognome</p>
         <input type="text" id="name">
     </div>
+    </div>
+    <div class="col-4">
     <div>
         <p>Numero di chilometri</p>
         <input type="number" id="km" placeholder="Inserisci i chilometri">
     </div>
-    <div>
-        <p>Fascia d'eta</p>
+    </div>
+    <div class="col-4">
+    <p>Fascia d'eta</p>
         <select id="age">
             <option value="0">Minorenne</option>
             <option value="1">Maggiorenne</option>
             <option value="2">Over 65</option>
         </select>
+        </div>
+    <div class="col-12">
+    <button class="btn btn-primary" id="btn-calc">Genera</button>
+    <button class="btn btn-primary" id="btn-reset">Annulla</button>
     </div>
-    <button id="btn-calc">Genera</button>
+    </div>
  </div>
+
+<section class="output">
+ <div class="container">
+    <h1>Il tuo biglietto</h1>
+    <div class="row">
+        <div class="col-12">
+            <p>DETTAGLIO PASSEGGIERI</p>
+        </div>
+        <div class="col-4">
+           <p>NOME PASSEGGIERO</p> 
+           <div class="output-name"></div>
+        </div>
+        <div class="col-2">
+            <p>Offerta</p>
+            <div class="output-offer"></div>
+        </div>
+        <div class="col-2">
+            <p>Carrozza</p>
+            <div class="output-train"></div>
+        </div>
+        <div class="col-2">
+            <p>Codice PC</p>
+            <div class="output-code"></div>
+        </div>
+        <div class="col-2">
+            <p>Costo biglietto</p>
+            <div class="output-cost"></div>
+        </div>
+    </div>
+ </div>
+</section>
 
     
 
