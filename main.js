@@ -40,6 +40,17 @@ document.getElementById('btn-calc').addEventListener('click', function () {
     document.querySelector('.output-train').textContent = 'Carrozza';
     document.querySelector('.output-code').textContent = 'Codice PC';
     document.querySelector('.output-cost').textContent = totalPrice.toFixed(2) + ' €';
+
+     // Genera valori casuali per la carrozza e il codice PC
+     const carriages = ['Cipolla', 'Pizza', 'Cocomero', 'Carbonara', 'Ananas'];
+     const randomCarriage = carriages[Math.floor(Math.random() * carriages.length)];
+ 
+     const codes = ['20127', '33100', '10090', '59300', '98766'];
+     const randomCode = codes[Math.floor(Math.random() * codes.length)];
+ 
+     // Aggiorna i contenuti della sezione "output" con i valori casuali generati
+     document.querySelector('.output-train').textContent = randomCarriage;
+     document.querySelector('.output-code').textContent = randomCode;
 });
 
 document.getElementById('btn-reset').addEventListener('click', function () {
