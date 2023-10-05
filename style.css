@@ -14,9 +14,9 @@ font-family: 'Teko', sans-serif;
 
 
 body {
-    background-color: rgba(30, 26, 26, 0.912);
-    color: white;
+   /* background-color: rgba(30, 26, 26, 0.912);*/
     font-family: 'Poppins', sans-serif;
+    background-image: url(./img/images.jpeg);
 }
 
 .container {
@@ -28,6 +28,22 @@ body {
 
 .btn_custom {
     background-color: white;
-    color: black;
+    color: rgb(112, 18, 201);
     border: solid 1px white;
+}
+
+p {
+    font-size: 18px;
+    color: rgb(112, 18, 201);
+}
+
+h1 {
+    color: rgb(212, 97, 128);
+    font-family: 'Fredoka', sans-serif; 
+    background-color: black;
+}
+
+h3 {
+    color: white;
+    
 }

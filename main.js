@@ -14,7 +14,7 @@ document.getElementById('btn-calc').addEventListener('click', function () {
 
       // Verifica se i campi sono stati compilati correttamente
       if (!name || !km || isNaN(km) || km <= 0) {
-        alert('Inserisci correttamente il nome del passeggero e il numero di chilometri.');
+        alert('Inserisci correttamente il nome del passeggero e il numero di chilometri, altrimenti come farai ad arrivare in ritardo con noi?');
         return;
     }
 
