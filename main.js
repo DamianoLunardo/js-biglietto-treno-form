@@ -8,12 +8,19 @@
 
 document.getElementById('btn-calc').addEventListener('click', function () {
     // Recupera i valori inseriti dall'utente
-    var km = parseFloat(document.getElementById('km').value);
-    var age = parseInt(document.getElementById('age').value);
+    const name = document.getElementById('name').value;
+    const km = parseFloat(document.getElementById('km').value);
+    const age = parseInt(document.getElementById('age').value);
 
-    // Calcola il prezzo del biglietto
-    var basePrice = km * 0.21;
-    var discount = 0;
+      // Verifica se i campi sono stati compilati correttamente
+      if (!name || !km || isNaN(km) || km <= 0) {
+        alert('Inserisci correttamente il nome del passeggero e il numero di chilometri.');
+        return;
+    }
+
+    // Calcola il prezzo del biglietto e altri dettagli
+    const basePrice = km * 0.21;
+    let discount = 0;
 
     if (age === 0) {
         // Sconto del 20% per i minorenni
@@ -23,8 +30,29 @@ document.getElementById('btn-calc').addEventListener('click', function () {
         discount = basePrice * 0.40;
     }
 
-    var totalPrice = basePrice - discount;
+    const totalPrice = basePrice - discount;
 
-    // Stampa il prezzo totale sulla console
-    console.log('Il prezzo del biglietto è: ' + totalPrice.toFixed(2) + ' €');
+
+
+    // Aggiorna i contenuti della sezione "output"
+    document.querySelector('.output-name').textContent = name;
+    document.querySelector('.output-offer').textContent = age === 0 ? 'Minorenne' : age === 2 ? 'Over 65' : 'Maggiorenne';
+    document.querySelector('.output-train').textContent = 'Carrozza';
+    document.querySelector('.output-code').textContent = 'Codice PC';
+    document.querySelector('.output-cost').textContent = totalPrice.toFixed(2) + ' €';
 });
+
+document.getElementById('btn-reset').addEventListener('click', function () {
+    // Reimposta i valori dei campi input
+    document.getElementById('name').value = '';
+    document.getElementById('km').value = '';
+    document.getElementById('age').value = '';
+
+    // Svuota i contenuti della sezione "output"
+    document.querySelector('.output-name').textContent = '';
+    document.querySelector('.output-offer').textContent = '';
+    document.querySelector('.output-train').textContent = '';
+    document.querySelector('.output-code').textContent = '';
+    document.querySelector('.output-cost').textContent = '';
+});
+
