@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,100;9..40,700&family=Fredoka:wght@700&family=Inconsolata:wght@300;600&family=Montserrat:wght@700&family=Open+Sans:wght@300&family=Poppins:wght@200;500;700&family=Reem+Kufi+Fun&family=Roboto:wght@100&family=Teko:wght@500&display=swap');
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'DM Sans', sans-serif;
+font-family: 'Fredoka', sans-serif;
+font-family: 'Inconsolata', monospace;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+font-family: 'Reem Kufi Fun', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Teko', sans-serif;
+*/
+
+
+body {
+    background-color: rgba(30, 26, 26, 0.912);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+    border: solid white 2px;
+    border-radius: 20px;
+    background-color: rgb(255, 111, 0);
+}
+
+.btn_custom {
+    background-color: white;
+    color: black;
+    border: solid 1px white;
+}
